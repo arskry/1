@@ -1,0 +1,15 @@
+class Solution:
+    def canMakeArithmeticProgression(self, arr: List[int]) -> bool:
+        res = True
+        if len(arr) == 2:
+            return res
+        else:
+            arr = sorted(arr)
+            between = arr[1] - arr[0]
+            for i in range(1, len(arr)):
+                if arr[i] - arr[i-1] == between:
+                    continue
+                else:
+                    res = False
+                    return res
+            return res
