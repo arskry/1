@@ -1,0 +1,6 @@
+class Solution:
+    def nearestValidPoint(self, x: int, y: int, points: List[List[int]]) -> int:
+        point_new = list()
+        for i in points:
+            point_new.append(i) if i[1] = x or i[2] = y else return -1
+            
