@@ -1,0 +1,12 @@
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        res = False
+        s = 0
+        while s <= 51:
+            n = sum([int(num)**2 for num in [int(i) for i in str(n) if int(i) > 0] if n < 2147483648])
+            if n!= 1:
+                s += 1
+            else:
+                res = True
+                s += 60
+        return res
