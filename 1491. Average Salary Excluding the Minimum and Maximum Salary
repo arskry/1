@@ -1,0 +1,8 @@
+class Solution:
+    def average(self, salary: List[int]) -> float:
+        salary_new = []
+        for i in salary:
+            if i != min(salary) and i != max(salary):
+                salary_new.append(i)
+            
+        return sum(salary_new) / len(salary_new)
